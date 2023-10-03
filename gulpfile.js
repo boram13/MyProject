@@ -24,7 +24,7 @@ gulp.task('watch:app', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(['src/assets/js/scripts.js', 'node_modules/angular/angular.min.js', 'node_modules/angular-ui-router/release/angular-ui-router.js'])
+    return gulp.src(['src/assets/js/scripts.js', 'node_modules/angular/angular.min.js','node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js', 'node_modules/angular-ui-router/release/angular-ui-router.js'])
         .pipe(concat('scripts.js'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify().on('error', function (e) {
@@ -34,7 +34,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('watch:js', function () {
-    gulp.watch(['src/assets/js/scripts.js', 'node_modules/angular/angular.min.js', 'node_modules/angular-ui-router/release/angular-ui-router.js'], ['js'])
+    gulp.watch(['src/assets/js/scripts.js', 'node_modules/angular/angular.min.js', 'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js', 'node_modules/angular-ui-router/release/angular-ui-router.js'], ['js'])
 })
 
 gulp.task('images', function () {

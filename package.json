@@ -12,8 +12,7 @@
   "author": "Praveen Josephmasilamani",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.6",
-    "angular-material": "^1.2.5",
+    "angular": "^1.8.2",
     "angular-ui-router": "^0.4.3",
     "express": "^4.16.2"
   },
