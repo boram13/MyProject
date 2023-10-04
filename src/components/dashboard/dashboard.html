@@ -1,39 +1,61 @@
-<!--Header-->
-<!-- <div header></div> -->
+<div class="fixed-top">
+	<div class="collapse" id="#navbarToggleExternalContent">
+	  <div class="bg-dark p-4">
+	  </div>
 
-<div ng-cloak>
-	<md-content>
-	  <br>
-	  <md-toolbar class="md-hue-2">
-		<div class="md-toolbar-tools">
-		  <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-			<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-		  </md-button>
-  
-		  <h2 flex md-truncate>Toolbar with Disabled/Enabled Icon Buttons</h2>
-  
-		  <md-button class="md-icon-button" aria-label="Favorite">
-			<md-icon md-svg-icon="img/icons/favorite.svg" class="favorite-icon"></md-icon>
-		  </md-button>
-  
-		  <md-button class="md-icon-button" aria-label="More">
-			<md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-		  </md-button>
-		</div>
-	  </md-toolbar>
-	  <br>
-  
-	  <md-toolbar>
-		<div class="md-toolbar-tools">
-		  <md-button aria-label="Go Back">
-			Back
-		  </md-button>
-		</div>
-		 
 	</div>
-<div class="content">
-	<h2>{{title}}</h2>
+	<nav class="navbar navbar-expand navbar-dark bg-primary">
+		<a href="#toggle" id="toggle" class="navbar-brand"></a>
+			<button class="navbar-toogler" type="button" data-toggle="collapse"  data-target="#navbarWrapper" aria-controls="navbarWrapper" aria-expanded="false" aria-label="Toggle navigation" >
+			<span class="navbar-toggler-icon"></span>
+		</a> </nav> </button>
+		<ul class="navbar-nav mr-auto"></ul>
+		<form class="form-inline my-2 my-md-0"> </form>
+	</div>
+</nav>          
+	
+<!------ Include the above in your HEAD tag ---------->
+          
+ <div id="wrapper" class="toggled">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
+                    <li> <a href="#">Dashboard</a> </li>
+                    <li> <a href="#">Overview</a> </li>
+                    <li> <a href="#">Events</a> </li>
+                    <li> <a href="#">Services</a> </li>
+                    <li> <a href="#">Contact</a> </li>
+                </ul>
+            </div> <!-- /#sidebar-wrapper -->
+	
+	</nav>
 </div>
+<div id="page-content-wrapper">
+	<div class="container-fluid">
+		<h1>Simple Sidebar</h1>
+		<p> This app is a short UI with a menu in toggle bar, where we input any client </p>
+	</div>
+</div> <!-- /#page-content-wrapper -->
+</div> <!-- /#wrapper -->
+<!-- Bootstrap core JavaScript -->
+<!-- Menu Toggle Script -->
+<script>
+$(function(){
+$("#toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("toggled");
+});
 
-<!--Footer-->
-<div footer></div>
+$(window).resize(function(e) {
+  if($(window).width()<=768){
+	$("#wrapper").removeClass("toggled");
+  }else{
+	$("#wrapper").addClass("toggled");
+  }
+});
+});
+
+</script>
+
+</html>
