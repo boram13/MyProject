@@ -1,14 +1,19 @@
 app.controller('dashboard', function ($scope) {
     $scope.title = 'Dashboard'
-    // insert methods
-    function switchSideBar(){
 
-        
-        let sidebarleft = this;
+    $scope.switchTab = function () {
 
-        document.getElementByClassName('sidebar')[0].classList.add('showSideBar')
-         
-        }
+        //.component
 
+        console.log('clicked')
+    }
+    return this
 });
 
+// $(document).ready(function(){
+//     $('.button-left').click(function(){
+//         $('.sidebar').toggleClass('fliph');
+//     });
+      
+//  });
+ 
