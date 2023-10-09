@@ -3,7 +3,9 @@ app.controller('dashboard', function ($scope) {
 
     $scope.switchTab = function () {
 
-        //.component
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('fliph');
+        
 
         console.log('clicked')
     }
