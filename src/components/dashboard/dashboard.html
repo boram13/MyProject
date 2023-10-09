@@ -3,6 +3,7 @@
         =======================-->
 		
         <header class="header">
+			<div>{{ title }}</div>
 			
           <nav class="navbar navbar-toggleable-md navbar-light pt-0 pb-0 ">
 			<div class="fixed-bottom">...</div>
@@ -10,10 +11,26 @@
 				<span class="navbar-toggler-icon"></span>
 			
             </button> 
-			
-			<!--ket do te shtojme nje button ne te majte te nav bar -->
-			<button class="navbar-toggler sidebar-toggler-left" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		 <a href="#" class="button-left"><span class="fa fa-fw fa-bars "></span></a> </button> </div>
+
+			<!--ket do te shtojme nje button ne te majte te nav bar qe do sherbeje si sidebar-->
+			<button ng-click="switchTab()" class="navbar-toggler sidebar-toggler-left" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		 <a href="#" class="button-left"><span class="fa fa-fw fa-bars "></span></a> Click</button> </div>
+
+		 <div class="collapse navbar-collapse flex-row-reverse" id="sidebarNavDropdown">
+			<ul class="list-sidebar bg-defoult">>
+			  <li class="nav-item dropdown messages-menu">
+				<a class="nav-link dropdown-toggle" href="http://example.com" id="sidebarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></buttton>
+				  <i class="fa fa-bell-o"></i>
+				  <span class="label label-success bg-success">10</span>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="sidebarDropdownMenuLink">
+				  <ul class="dropdown-menu-over list-unstyled">
+					<li class="header-ul text-center">You have 4 messages</li>
+				</ul>
+			  </div>
+			</li>
+		  </ul>
+		</div>
 
 
             <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
@@ -101,8 +118,7 @@
                     <li class="header-ul text-center">You have 10 notifications</li>
                     <li>
                       <!-- inner menu: contains the actual data -->
-                      <ul class="menu list-unstyled"
-					  <p>Why not buy a new awesome theme?</p>>
+                      <ul class="menu list-unstyled">
                         <li>
                           <a href="#">
                             <i class="fa fa-users text-aqua"></i> 5 new members joined today
@@ -164,12 +180,7 @@
             </li>
 			<!--menyra per te vendosur disa nenelemente ne nje section, duke i bere ato te klikueshem -->
             <li> <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a> </li>
-            <li> <a href="#" data-toggle="collapse" data-target="#products" class="collapsed active" > <i class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span> <span class="fa fa-chevron-left pull-right"></span> </a>
-            <ul class="sub-menu collapse" id="products">
-              <li class="active"><a href="#">CSS3 Animation</a></li>
-              <li><a href="#">General</a></li>
-              <li><a href="#">Buttons</a></li>
-            </ul>
+            <li> <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label">Graphs</span></a>
           </li>
           <li> <a href="#"><i class="fa fa-laptop"></i> <span class="nav-label">Grid options</span></a> </li>
           <li> <a href="#" data-target="#tables"><i class="fa fa-table"></i> <span class="nav-label">Tables</span></span></a>
