@@ -1,164 +1,53 @@
  <!--===================
         Header
         =======================-->
-		
         <header class="header">
 			<div>{{ title }}</div>
 			
           <nav class="navbar navbar-toggleable-md navbar-light pt-0 pb-0 ">
-			<div class="fixed-bottom">...</div>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			
-            </button> 
-
+			<div class="fixed-bottom"></div>
+           
 			<!--ket do te shtojme nje button ne te majte te nav bar qe do sherbeje si sidebar-->
-			<button ng-click="switchTab()" class="navbar-toggler sidebar-toggler-left" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		 <a href="#" class="button-left"><span class="fa fa-fw fa-bars "></span></a> Click</button> </div>
+			<button ng-click="switchTab()" class="navbar-toggler sidebar-toggler-rught" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		 <a href="#" class="button-right"><span class="fa fa-fw fa-bars "></span></a> Click</button> </div>
 
+     <!--bej collapse te dy tabeve te userit-->
+     
 		 <div class="collapse navbar-collapse flex-row-reverse" id="sidebarNavDropdown">
-			<ul class="list-sidebar bg-defoult">>
+      <div clas="sidebar-top"></div>
+			<ul class="list-sidebar bg-defoult full_height">>
 			  <li class="nav-item dropdown messages-menu">
-				<a class="nav-link dropdown-toggle" href="http://example.com" id="sidebarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></buttton>
-				  <i class="fa fa-bell-o"></i>
-				  <span class="label label-success bg-success">10</span>
-				</a>
+			
 				<div class="dropdown-menu" aria-labelledby="sidebarDropdownMenuLink">
-				  <ul class="dropdown-menu-over list-unstyled">
-					<li class="header-ul text-center">You have 4 messages</li>
-				</ul>
+				 
 			  </div>
 			</li>
 		  </ul>
 		</div>
-
-
             <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
+              
               <ul class="navbar-nav">
                 <li class="nav-item dropdown messages-menu">
                   <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></buttton>
                     <i class="fa fa-bell-o"></i>
-                    <span class="label label-success bg-success">10</span>
+
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <ul class="dropdown-menu-over list-unstyled">
-                      <li class="header-ul text-center">You have 4 messages</li>
-                      <li>
-                        <!-- inner menu: contains the actual data -->
-                        <ul class="menu list-unstyled">
-                          <li><!-- start message -->
-                          <a href="#">
-                            <div class="pull-left">
-                              <img src="http://via.placeholder.com/160x160" class="rounded-circle  " alt="User Image">
-                            </div>
-                            <h4>
-                            Support Team
-                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                            </h4>
-                          </a>
-                        </li>
-                        <!-- end message -->
-                        <li>
-                          <a href="#">
-                            <div class="pull-left">
-                              <img src="http://via.placeholder.com/160x160" class="rounded-circle " alt="User Image">
-                            </div>
-                            <h4>
-                            AdminLTE Design Team
-                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                            </h4>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <div class="pull-left">
-                              <img src="http://via.placeholder.com/160x160" class="rounded-circle " alt="User Image">
-                            </div>
-                            <h4>
-                            Developers
-                            <small><i class="fa fa-clock-o"></i> Today</small>
-                            </h4>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <div class="pull-left">
-                              <img src="http://via.placeholder.com/160x160" class="rounded-circle " alt="User Image">
-                            </div>
-                            <h4>
-                            Sales Department
-                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                            </h4>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <div class="pull-left">
-                              <img src="http://via.placeholder.com/160x160" class="rounded-circle " alt="User Image">
-                            </div>
-                            <h4>
-                            Reviewers
-                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                            </h4>
-                          </a>
-                        </li>
-                      </ul>
+
                     </li>
-                    <li class="footer-ul text-center"><a href="#">See All Messages</a></li>
+          
                   </ul>
                 </div>
               </li>
-              <li class="nav-item dropdown notifications-menu">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-envelope-o"></i>
-                  <span class="label label-warning bg-warning">10</span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <ul class="dropdown-menu-over list-unstyled">
-                    <li class="header-ul text-center">You have 10 notifications</li>
-                    <li>
-                      <!-- inner menu: contains the actual data -->
-                      <ul class="menu list-unstyled">
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                            page and may cause design problems
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-users text-red"></i> 5 new members joined
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-user text-red"></i> You changed your username
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="footer-ul text-center"><a href="#">View all</a></li>
-                  </ul>
-                </div>
-              </li>
-              
             </ul>
           </div>
         </nav>
       </header>
       <div class="main">
         <aside>
+          
           <div class="sidebar left ">
+            <div class="container">
             <div class="user-panel">
               <div class="pull-left image">
                 <img src="http://via.placeholder.com/160x160" class="rounded-circle" alt="User Image">
@@ -168,31 +57,50 @@
               <div class="pull-left info">
               </div>
             </div>
+            </div>
             <ul class="list-sidebar bg-defoult">
-              <li> <a href="#" data-toggle="collapse" data-target="#dashboard" class="collapsed active" > <i class="fa fa-th-large"></i> <span class="nav-label"> Dashboards </span> <span class="fa fa-chevron-left pull-right"></span> </a>
+              <li> <a href="#" data-toggle="collapse" data-target="#dashboard" class="collapsed active" > <i class="fa fa-th-large"></i> <span class="nav-label"> User </span> <span class="fa fa-chevron-left pull-right"></span> </a>
               <ul class="sub-menu collapse" id="dashboard">
-                <li class="active"><a href="#">CSS3 Animation</a></li>
-                <li><a href="#">General</a></li>
-                <li><a href="#">Buttons</a></li>
-                <li><a href="#">Panels</a></li>
-                <li><a href="#">Bootstrap Model</a></li>
+                <li class="active"><a href="#"> Registrated user </a></li>
               </ul>
             </li>
 			<!--menyra per te vendosur disa nenelemente ne nje section, duke i bere ato te klikueshem -->
-            <li> <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a> </li>
-            <li> <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label">Graphs</span></a>
+        
+      <li> <a href="#" data-toggle="collapse" data-target="#dashboard1" class="collapsed active" > <i class="fa fa-th-large"></i> <span class="nav-label"> New User </span> <span class="fa fa-chevron-left pull-right"></span> </a>
+        <ul class="sub-menu collapse" id="dashboard1">
+          <li class="active"><a href="#"> Registration format</a></li>
+        </ul>
+      </li>
+              <!-- <div class="formstyle">
+
+                <form>
+                    <div class="mb-3">
+                        <label for="str1" class="form-label"> Name </label>
+                        <input type="string" class="form-control" id="str1" aria-describedby="stringHelp">
+                        <div id="stringHelp" class="form-text">You have to add user name that user information can be fully completed</div>
+                    </div>
+                
+                    <div class="mb-3">
+                      <label for="str2" class="form-label"> Last Name </label>
+                      <input type="string" class="form-control" id="str2" aria-describedby="stringHelp">
+                      <div id="stringHelp" class="form-text">You have to add user last name that user information can be fully completed</div>
+                  </div>
+                
+                    <div class="mb-3">
+                        <label for="nr1" class="form-label"> Age </label>
+                        <input type="number" class="form-control" id="nr1" aria-describedby="numberHelp">
+                        <div id="numberHelp" class="form-text">You have to add user age that user information can be fully completed</div>
+                    </div>
+                
+                    <button class="btn btn-primary" id="formBtn" onclick="printUserInfoFunction()">Submit User Information</button>
+                
+                    <div class="mb-3">
+                        <label for="output"  type="button"  id="total_information" class="form-label"></label>
+                    </div>
+                   
+                </form> -->
           </li>
-          <li> <a href="#"><i class="fa fa-laptop"></i> <span class="nav-label">Grid options</span></a> </li>
-          <li> <a href="#" data-target="#tables"><i class="fa fa-table"></i> <span class="nav-label">Tables</span></span></a>
-          <ul  class="sub-menu collapse" id="tables" >
-          </ul>
-        </li>
-        <li> <a href="#" data-toggle="collapse" data-target="#e-commerce" class="collapsed active" ><i class="fa fa-shopping-cart"></i> <span class="nav-label">E-commerce</span><span class="fa fa-chevron-left pull-right"></span></a>
-        <ul  class="sub-menu collapse" id="e-commerce" >
-          <li><a href=""> Products list</a></li>
-          <li><a href=""> Product detail</a></li>
-          <li><a href="">Cart</a></li>
-          <li><a href=""> Orders</a></li>
+          
 		 </li>
         </ul>
       </li>
